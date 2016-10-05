@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'paperclip'
 gem 'better_errors'
 gem 'haml'
+gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use SCSS for stylesheets
@@ -36,10 +37,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3'
   gem 'byebug'
-end
-
-group :production do
-  gem 'pg'
 end
 
 group :development do
