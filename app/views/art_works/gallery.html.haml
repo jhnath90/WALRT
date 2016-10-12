@@ -1,0 +1,9 @@
+- @art_works.each do |aw|
+  .col-md-4
+    = image_tag aw.image
+    = aw.name
+    = aw.artist
+    %span
+      .glyphicon.glyphicon-thumbs-up
+    %span
+      .glyphicon.glyphicon-thumbs-down

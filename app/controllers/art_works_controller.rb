@@ -1,7 +1,11 @@
 class ArtWorksController < ApplicationController
   before_action :authenticate_user!
-  
+
   def home
+  end
+
+  def gallery
+    @art_works = ArtWork.all
   end
 
   def index
@@ -34,6 +38,7 @@ class ArtWorksController < ApplicationController
       end
     end
   end
+
 
   private
 

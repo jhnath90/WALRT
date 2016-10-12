@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :art_works
+  get 'gallery', to: 'art_works#gallery', as: :gallery
   root 'art_works#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
