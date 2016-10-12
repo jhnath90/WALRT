@@ -8,6 +8,12 @@ class ArtWorksController < ApplicationController
     @art_works = ArtWork.all
   end
 
+  def show
+    @art_works = ArtWork.all
+    @art_work = ArtWork.find(params[:id])
+    @vote = Vote.new
+  end
+
   def index
     @art_works = ArtWork.all
   end
@@ -43,7 +49,7 @@ class ArtWorksController < ApplicationController
   private
 
   def art_work_params
-    params.require(:art_work).permit(:name, :artist, :image)
+    params.require(:art_work).permit(:name, :artist, :image, :vote_id)
   end
 
 end

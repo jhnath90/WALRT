@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :votes
   resources :art_works
   get 'gallery', to: 'art_works#gallery', as: :gallery
   root 'art_works#home'

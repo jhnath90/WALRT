@@ -1,0 +1,7 @@
+%div.text-center.h2
+  = image_tag @art_work.image
+  = @art_work.name
+  = @art_work.artist
+  %br
+  = render 'vote_form'
+  = @art_work.votes.count

@@ -1,0 +1,5 @@
+%div.center_div
+  = form_for @vote, remote: true do |f|
+    = f.hidden_field :user_id, value: current_user.id
+    = f.hidden_field :art_work_id, value: @art_work.id
+    = button_tag "", type: 'submit', class: "btn btn-primary glyphicon glyphicon-thumbs-up"
