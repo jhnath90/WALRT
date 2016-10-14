@@ -18,7 +18,7 @@
           = "Sample 1 Artist 1"
     - @art_works.each do |aw|
       .item
-        = image_tag aw.image, class: "img-responsive"
+        = image_tag aw.image(:large), class: "img-responsive"
         .carousel-caption
           %h3
             = aw.name
