@@ -5,3 +5,5 @@
   %br
   = render 'vote_form'
   = @art_work.votes.count
+  - if current_user.email == 'joshhnath@gmail.com'
+    = button_to "Delete Art", art_work_path,  class: "btn btn-danger", data: { confirm: "Are you sure?" }, method: :delete

@@ -1,6 +1,7 @@
-.text-center
-  %h1 Enter Gallery
-  =link_to "Here", gallery_path, class: "btn btn-primary edit"
-  %br
-  %h1 Upload Art
-  =link_to "Here", new_art_work_path, class: "btn btn-primary edit"
+%body{ :style => "background-image: url(assets/artgallery.jpg); background-size: cover; background-repeat: no-repeat" }
+  .text-center
+    %h1 Enter Gallery
+    =link_to "Here", gallery_path, class: "btn btn-primary edit"
+    %br
+    %h1 Upload Art
+    =link_to "Here", new_art_work_path, class: "btn btn-primary edit"

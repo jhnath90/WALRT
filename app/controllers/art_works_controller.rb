@@ -38,7 +38,7 @@ class ArtWorksController < ApplicationController
     @art_work = ArtWork.find(params[:id])
     respond_to do |format|
       if @art_work.destroy
-        format.html {redirect_to :back, flash: {success: "Art work deleted"}}
+        format.html {redirect_to gallery_path, flash: {success: "Art work deleted"}}
       else
         format.html {redirect_to :back, flash:  {error: "Art work failed to be deleted"}}
       end
