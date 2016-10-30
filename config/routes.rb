@@ -6,10 +6,15 @@ Rails.application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, at: '/store'
-          devise_for :users
+  devise_for :users
   resources :votes
   resources :art_works
   get 'gallery', to: 'art_works#gallery', as: :gallery
+  devise_scope :user do
+    get '/users/sign_up', to: 'devise/registrations#new'
+    get '/users/sign_in', to: 'devise/sessions#new'
+    delete '/users/sign_out', to: 'devise/sessions#destroy'
+  end
   root 'art_works#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
